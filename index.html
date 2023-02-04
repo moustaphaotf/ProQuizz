@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PROQUIZZ</title>
+	<link rel="stylesheet" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.11.3.min.js" defer></script>
+	<script src="js/jquerymobile/jquery.mobile-1.4.5.min.js" defer></script>
+	<script src="js/index.js" defer></script>
+</head>
+  <div id="container">
+    <div class="page home" id="home" data-role="page">
+      <div class="header"  data-role="header" data-role="header"  data-role="header">
+        <div class="appname"><h1><span>P</span>RO<span>Q</span>UIZZ</h1></div>
+        <div class="logo"></div>
+      </div>
+      <div class="content" data-role="content">
+      </div>
+      <div class="footer" data-role="footer">
+        <div class="copyright"><small>ProQuizz &copy; 2023</small></div>
+        <div class="begin"><a href="#room" data-transition="pop">Commencez</a></div>
+      </div>
+    </div>
+    <div class="page room" id="room" data-role="page">
+      <div class="header"  data-role="header"><h1>ROOM</h1></div>
+      <div class="main" data-role="main">
+        <div class="question">
+          <p>Pour déclarer une constance, on utilise :</p>
+        </div>
+        <div class="answers">
+          <!-- <div class="true-false">
+            <div class="yes selected">Vrai</div>
+            <div class="no">Faux</div>
+          </div> -->
+          <!-- <div>
+            <span class="multiple-choix-label">Plusieurs choix sont possibles !</span>
+            <div class="qcm multiple">
+                <div>int</div>
+                <div>float</div>
+                <div>left</div>
+                <div>double</div>
+                <div>Lorem, ipsum dolor.</div>
+            </div>
+          </div> -->
+          <div class="unique-answer">
+            <input type="text" placeholder="Votre réponse ..."  />
+          </div>
+        </div>
+        <div class="actions">
+          <a class="ui-btn" href="#success" data-rel="dialog" data-transition="flip">Valider</a>
+        </div>
+      </div>
+      <div class="footer" data-role="footer"></div>
+    </div>
+    <div class="page success" id="success" data-role="page">
+      <div class="header" data-role="header">
+      </div>
+      <div class="main" data-role="main">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ab nulla optio dolor iusto id maxime, officia eius dicta quod saepe suscipit, corrupti recusandae, amet neque? Nesciunt delectus suscipit exercitationem.</p>
+        <a href="#" class="ui-btn" data-rel="back" >Continuer</a>
+      </div>
+    </div>
+    <div class="page error" id="error" data-role="page">
+      <div class="header"  data-role="header"></div>
+      <div class="main" data-role="main">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ab nulla optio dolor iusto id maxime, officia eius dicta quod saepe suscipit, corrupti recusandae, amet neque? Nesciunt delectus suscipit exercitationem.</p>
+
+      </div>    </div>
+  </div>
+</html>
