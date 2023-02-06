@@ -1,4 +1,4 @@
-export default [
+let dataQuestions = [
   {
     type: "qcm",
     question: "Comment on déclare une constante dans le langage C++ ?",
@@ -93,7 +93,7 @@ export default [
   },
 
   {type: "qcm",
-    question: ". En fonction de l’affinité d’un langage par rapport à la machine, on peut classer les langages en :",
+    question: "En fonction de l’affinité d’un langage par rapport à la machine, on peut classer les langages en :",
     propositions : [
       "Haut niveau et bas niveau",
       "Haut niveau, niveau intermediaire et bas niveau"
@@ -157,24 +157,24 @@ export default [
     "Un navigateur",
     "Un interprétreur",
     "Un compilateur",
-    "Un débogeur",
+    "Un débogueur",
     "Un programme",
     "Un logiciel"
   ],
   answers: [0,3,4],
-  description: "Nous avons besoin d'un éditeur pour écrire le programme, un débogeur qui permet de tracer le programme et un compilateur qui va compiler le programme  et identifier les erreurs de syntaxe avant de donner un résultat.",
+  description: "Nous avons besoin d'un éditeur pour écrire le programme, un débogueur qui permet de tracer le programme et un compilateur qui va compiler le programme  et identifier les erreurs de syntaxe avant de donner un résultat.",
   alreadyAsked: false,
   },
 
   {type: "qcm multiple",
-  question: "Un logiciel qui renferme tous les outils (compilateur, debaugeur editeur de text) de programmation est un:",
+  question: "Un logiciel qui renferme tous les outils (compilateur, débogueur éditeur de texté) de programmation est un:",
   propositions : [
     "IDE (Environnement de Dévoloppement Intégré)",
     "IDE (Identity Data Entreprize)",
     "IDE (Identity Develeppement Entreprize)",
   ],
   answers: [0],
-  description: "Un IDE étant un environnement de développement integré il renferme tous les outils de développement: l'éditeur de texte, le compilateur , le débogeur.",
+  description: "Un IDE étant un environnement de développement integré il renferme tous les outils de développement: l'éditeur de texte, le compilateur , le débogueur.",
   alreadyAsked: false,
   },
   {type: "qcm multiple",
@@ -191,19 +191,19 @@ export default [
   alreadyAsked: false,
   },
   {type: "qcm",
-    question: "Le #include <iostream> est :",
+    question: "Le #include &lt;iostream&gt; est :",
     propositions : [
       "Une inclusion de l'espace de nom",
       "Une directive du préprocesseur"
     ],
     answer:1,
-    description: "Le #include <iostream> est une directive du préprocesseur, c'est une ligne en fait qui permet d'inclure l'ensemble des fonctions et constantes d'une bibliothèque.",
+    description: "Le #include &lt;iostream&gt; est une directive du préprocesseur, c'est une ligne en fait qui permet d'inclure l'ensemble des fonctions et constantes d'une bibliothèque.",
     alreadyAsked: false,
   },
   {type: "true-false",
-    question: "Le #include <iostream> permet de charger la bibliothèque des fonctions d’entrée et de sortie standard, donc une interaction entre le programme et l’utilisateur ?:",
+    question: "Le #include &lt;iostream&gt; permet de charger la bibliothèque des fonctions d’entrée et de sortie standard, donc une interaction entre le programme et l’utilisateur ?:",
     answer: true,
-    description: "Le #include <iostream> permet l'interaction entre l'utilisateur et le programme comme la saisie au clavier ainsi que l'affichage à la console.",
+    description: "Le #include &lt;iostream&gt; permet l'interaction entre l'utilisateur et le programme comme la saisie au clavier ainsi que l'affichage à la console.",
     alreadyAsked: false
   },
   {type: "qcm multiple",
@@ -222,7 +222,7 @@ export default [
 {type: "qcm",
     question: "Le véritable point de démarrage d’un programme est :",
     propositions : [
-      "Le #include <iostream>",
+      "Le #include &lt;iostream&gt;",
       "La fonction main()",
       "Les directives du préprocesseur",
       "La première fonction en partant du haut du programme"
@@ -265,7 +265,7 @@ export default [
   {type: "qcm multiple",
     question: "Quels noms de variables suivants sont valides en respectant les règles obligatoires et les recommandations ?",
     propositions: [
-      12345,
+      "12345",
       "2ageUtilisateur",
       "ageUtilisateur",
       "age utilisateur",
@@ -299,7 +299,7 @@ export default [
     alreadyAsked: false
   },
   {type: "qcm multiple",
-    question: "Quelle sont les syntaxes pour déclarer une variable en C++ ?",
+    question: "Quelles sont les syntaxes pour déclarer une variable en C++ ?",
     propositions: [
       "Type nom()",
       "Type nom(valeur)",
@@ -314,7 +314,7 @@ export default [
   {type: "qcm",
     question: "Quelle valeur contient une une variable entière à sa déclaration si cete dernière n'est pas initialisée ?",
     propositions: [
-      0, 
+      "0", 
       "Aucun des deux",
       "Une valeur inconnue",
     ], 
@@ -331,11 +331,11 @@ export default [
   {type: "qcm multiple",
     question: "Choisissez la(les) bonne(s) syntaxe(s) de déclaration d’une référence (NB : la variable à référencer est de type type1",
     propositions: [
-      "type1 &nom(variableAReferencer)",
-      "type2 &nom(variableAReferencer)",
-      "type2 &nom",
-      "type1& nom(variableAReferencer)",
-      "type1& nom",
+      "type1 &amp;nom (variableAReferencer)",
+      "type2 &amp;nom (variableAReferencer)",
+      "type2 &amp;nom",
+      "type1&amp; nom (variableAReferencer)",
+      "type1&amp; nom",
     ], 
     answers: [0, 3],
     description: "Lors de la déclaration d'une réference, nous devons toujours indiquer la variable référencée. Et la référence doit être du même type que la variable référencée.",
@@ -364,13 +364,13 @@ export default [
     alreadyAsked: false
   },
   {type: "qcm",
-    question: "Quelle fonction permet de calculer le logarithme népérien d'une valeur ?",
+    question: "Quelle fonction permet de calculer le logarithme népérien d'une valeur en C++ ?",
     propositions: [
       "log()",
       "log10()",
       "ln()",
     ], 
-    answer: 2,
+    answer: 0,
     description: "Contrairement au sens commun, en C++, la fonction log() de la librairie cmath est utilisée pour calculer le logarithme népérien (de base e) d'un nombre.",
     alreadyAsked: false
   },
@@ -427,13 +427,13 @@ export default [
     alreadyAsked: false
   },
   {type: "qcm multiple",
-    question: "Une structure conditionnelle for comprend 3 parties :",
+    question: "Une structure itérative for comprend 3 parties :",
     propositions: [
       "Une initialisation",
       "Une condition",
       "Une incrémentation",
       "Une décrémentation",
-      "Une mise à jour"
+      "Une mise à jour du compteur"
     ], 
     answers: [0, 1, 4],
     description: "La mise à jour du compteur inclut l'incrémentation, la décrémentation mais aussi un pas différent de 1.",
@@ -446,7 +446,7 @@ export default [
       "true si B = false",
       "false si A = false et B = false"
     ], 
-    answers: [0, 1, 2],
+    answers: [0, 2],
     description: "Si au moins l'une des opérandes vaut true, alors toute l'expression vaut true. Ainsi est la table de vérité de l'opérateur || qui symbolise le OU en C++.",
     alreadyAsked: false
   }, 
@@ -454,7 +454,7 @@ export default [
     question: "Découper un programme en sous-programmes (fonctions et/ou procédures) présente les avantages suivants :",
     propositions: [
       "Une meilleure lisibilité du code, dont une maintenance facilité", 
-      "Une facilité de partage dyu travail dans un projet de groupe",
+      "Une facilité de partage du travail dans un projet de groupe",
       "Un partage de code source facilité"
     ], 
     answers: [0, 1, 2],
@@ -484,32 +484,32 @@ export default [
   {
     type : "qcm",
     question : " Soit nombre1 (valant 5) et nombre2 (valant 2) deux variables entières,(double)nombre1 / nombre2 est égal à : ",
-    propositions:[ 2.5,2,"2,5"],
-    answer : [0],
+    propositions:["2.5","2","2,5"],
+    answer : 0,
     description : " L'operation éffectuée dans ce bout de code est appelé Transtypage , elle permet de forcer le resultat d'une operation ",
     alreadyAsked : false,
   },
   {
     type : "qcm",
-    question : " Soit deux variables entières nombre1 valant 5 et nombre2, que valent nombre1 et nombre2 après l’exécution de l’instruction nombre2 = nombre1++ + 7 ",
-    propositions : [13,12,14],
-    answer : [1],
+    question : "Soit deux variables entières nombre1 valant 5 et nombre2, que valent  respectivement nombre1 et nombre2 après l’exécution de l’instruction nombre2 = nombre1++ + 7 ",
+    propositions : ["6 et 12","5 et 12","6 et 13", "5 et 13"],
+    answer : 0,
     description : " Dans cette instruction on a ulisé une Post-incrémentation , elle n'est pas prioritaire sur l'affectation , donc la varible s'incrémente aprés l'affectation",
     alreadyAsked : false,
   },
   {
     type : "qcm",
     question : " Soit deux variables entière nombre1 valant 5 et nombre2, que valent nombre1 et nombre2 après l’exécution de l’instruction nombre2 = ++ nombre1 + 7 ",
-    propositions : [13,12,14],
-    answer : [0],
+    propositions : ["6 et 12","5 et 12","6 et 13", "5 et 13"],
+    answer : 2,
     description : " Dans cette instruction on a ulisé une Pré-incrémentation , elle est prioritaire sur l'affectation , donc la varible s'incrémente avant l'affectation",
     alreadyAsked : false,
   },
   {
     type :"qcm multiple",
-    question : "Quelles sont les quatres façon d'écrire la d'écrémentation d'une variable nombre ?",
+    question : "Quelles sont les quatres façon d'écrire la décrémentation d'une variable nombre ?",
     propositions : [ "nombre ++ ", "nombre --","--nombre"," nombre += 1","nombre -= 1","nombre = nombre - 1"],
-    answers : [1,2,4,6],
+    answers : [1,2,4,5],
     description : " Décrémenter une variable revient à lui soustraire un et cela se fait de plusieurs maniéres ",
     alreadyAsked : false,
   },
@@ -525,7 +525,7 @@ export default [
     type : "qcm",
     question : "Retrancher un à une variable, c’est un(e): ",
     propositions : ["Affectation","Décrémentation","Incrémentation","Initialisation "],
-    answer : [1],
+    answer : 1,
     description : "La décrémentation est une operation tellement courante en programmation au point qu'elle a diverses maniéres d'être representé en tout quatre  ",
     alreadyAsked : false,
   },
@@ -534,14 +534,14 @@ export default [
     question : "Augmenter un à une variable, c’est un(e): ",
     propositions : ["Affectation","Décrémentation","Incrémentation","Initialisation "],
     description : "L'incrémentation  est une operation tellement courante en programmation au point qu'elle a diverses maniéres d'être representé en tout quatre.",
-    answer : [2],
+    answer : 2,
     alreadyAsked : false,
   },
   {
     type : "qcm multiple",
-    question : "Un entier étant codé sur 4 octets, quelles sont les valeurs minimales et maximales pour :",
-    propositions : ["[-6 540 457 449] - [6 540 457 449]","[-2 147 483 648] - [2 147 483 648]","[-4 340 477 879] - [4 340 477 879]"],
-    answer : [1],
+    question : "Un entier étant codé sur 4 octets, quelles sont les valeurs minimales et maximales pour un entier signé:",
+    propositions : ["[-6 540 457 449] - [6 540 457 449]","[-2 147 483 647] - [2 147 483 648]","[-4 340 477 879] - [4 340 477 879]"],
+    answers : [1],
     description : "Un entier étant codé sur 4 octets a une valeur comprise entre [-2 147 483 648] - [2 147 483 648] s'agissant biensûr d'un entier signé ",
     alreadyAsked : false,
   },
@@ -549,7 +549,7 @@ export default [
     type : "qcm",
     question : "La fonction getline() permet de lire :",
     propositions : [" Les entiers et les chaînes de caractères","Les réels et les chaines de charactères","Les chaines de caractères avec ou sans espace(s) ", " Les entiers et les réels "],
-    answer : [2],
+    answer : 2,
     description : "La fonction getline() permet de lire les chaines de caractéres avant ou sans espaces , elle permet de palier aux problémes rencontrés lors de la saisie d'un espace avec la lecture des chaines avec cin ",
     alreadyAsked : false,
   },
@@ -564,11 +564,14 @@ export default [
   {
     type :"qcm multiple",
     question : "Choisissez la (les) bonnes syntaxes(s) :",
-    propositions : ["cin << variable","cout << variable","cout << 'variable'","cin >> 'variable'","cin >> variable"],
-    answers : [1,2,4],
-    description : "En matiére de syntaxe il est important de connaître le sens des chevrons ,ce premier signifie '<<' : que les données sont à afficher et '>>' signifie que les données doivent provenir du clavier donc à saisir.",
+    propositions : ["cin &gt;&gt; variable","cout &gt;&gt; variable","cout &lt;&lt; 'variable'","cin  &lt;&lt; 'variable'","cin  &lt;&lt; variable"],
+    answers : [0,2],
+    description : "En matière de syntaxe il est important de connaître le sens des chevrons ,ce premier signifie '<<' : que les données sont à afficher et '>>' signifie que les données doivent provenir du clavier donc à saisir.",
     alreadyAsked : false,
-  },
+  }
+];
+
+var q = [,
   {type: "qcm multiple",
     question: "",
     propositions : [],
@@ -587,5 +590,4 @@ export default [
     answer: true,
     description: "",
     alreadyAsked: false
-  }
-];
+}];
