@@ -1,9 +1,10 @@
 [data-role="page"] {
   height: calc(100vh - 125px);
 }
+
 .page {
   position: relative;
-  padding: 8px;
+  background: linear-gradient(25deg,#A7D4,#cDD) ;
 }
 
 .footer {
@@ -13,6 +14,8 @@
   left: 0;
   text-align: center;
 }
+
+
 
 .begin {
   position:absolute;
@@ -27,6 +30,8 @@
 
 .header .appname h1{
   font-size: 1em;
+  user-select: none;
+  font-style:italic;
 }
 
 .header .appname h1 span {
@@ -44,6 +49,7 @@
   font-weight: bold;
   font-size: 20px;
   padding: 5px;
+  user-select: none;
 }
 
 
@@ -53,7 +59,13 @@
   margin-top: 30vh;
 }
 
-.answers .true-false > {
+.answers .true-false > *,
+.answers .qcm > * {
+  cursor: pointer;
+  user-select: none;
+}
+
+.answers .true-false > *{
   width: 45%;
   font-size: 2em;
   text-align: center;
@@ -65,10 +77,6 @@
   color: white !important;
 }
 
-
-.actions a {
-  margin-top: 2rem;
-}
 
 .answers .qcm {
   display: flex;
@@ -91,4 +99,10 @@
   display: block;
   text-align: center;
   font-size: small;
+}
+
+.answers .unique-answer input{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
 }
