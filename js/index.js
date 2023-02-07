@@ -26,14 +26,26 @@ $(document).on('pagechange', function() {
     } else {
       $(this).removeClass('selected');
     }
-  });  
+  }); 
+
+  // validation par appui sur la touche entrée lors de la saise des réponses (unique-answer)
+  $(".unique-answer").on('keyup', (e) => {
+    if(e.originalEvent.key === 'Enter') {
+      validate(getUserAnswer());
+    }
+  });
 });
 
 // évènement pour la validation de la question
 $('.actions .validate').click((e) => {
   e.preventDefault();
-  
   validate(getUserAnswer());
+})
+
+$('.unique-answer input').on('keyup', e => {
+  if(e.originalEvent.key == "Enter") {
+    validate(getUserAnswer());
+  }
 })
 
 /**
@@ -46,7 +58,6 @@ function getUserAnswer() {
   switch(currentQuestion.type) {
     case 'qcm' : 
       userAnswer = $('.answers .selected').html()
-      console.log(userAnswer);
       break;
     case 'qcm multiple' : 
       userAnswer = Array.from($('.answers .selected')).map(el => el.innerHTML);
@@ -70,7 +81,6 @@ function getUserAnswer() {
  */
 function validate(userAnswer) {
   let success = true;
-  console.log(userAnswer);
   switch(currentQuestion.type) {
     case 'unique-answer' :
       if(userAnswer.trim() === ""){
@@ -166,14 +176,14 @@ function getStatus(succeed) {
         answerText += " réponse" + (currentQuestion.answers.length === 1 ? '' : "s");
         answerText += " étai"  + (currentQuestion.answers.length === 1 ? 't' : "ent");
         answerText += " bien : ";
-        answerText += currentQuestion.answers.map(a => `<b>${currentQuestion.propositions[a]}</b>`).join('; ');
+        answerText += currentQuestion.answers.map(a => `<li style="margin-left: 5px;"><i>${currentQuestion.propositions[a]}</i></li>`).join('');
       } else {
         answerText = "Malheureusement "
         answerText += currentQuestion.answers.length == 1 ? 'la ' : "les ";
         answerText += "bonne" + (currentQuestion.answers.length == 1 ? '' : "s");
         answerText += " réponse" + (currentQuestion.answers.length == 1 ? '' : "s");
         answerText += " étai"  + (currentQuestion.answers.length == 1 ? 't' : "ent : ");
-        answerText += currentQuestion.answers.map(a => `<b>${currentQuestion.propositions[a]}</b>`).join('; ');
+        answerText += currentQuestion.answers.map(a => `<li style="margin-left: 5px;"><i>${currentQuestion.propositions[a]}<i></li>`).join('');
       }
       break;
       case 'unique-answer' : 
@@ -197,10 +207,8 @@ function getStatus(succeed) {
  */
 var i = 0;
 function getQuestion() {
-  let question = null;
   let ind = Math.floor(Math.random() * dataQuestions.length);
-
-  return dataQuestions[ind];
+  return dataQuestions[35];
 }
 
 /**
@@ -244,8 +252,6 @@ function displayQuestion(question) {
         propositions[i] = propositions[randIndice];
         propositions[randIndice] = tmp;
       }
-      console.log(propositions)
-      console.log(question.propositions)
       html += "<div>";
         html += question.type === 'qcm' ? '' : '<span class="multiple-choix-label">Plusieurs choix sont possibles !</span>';
         html += '<div class="' + question.type + '">';
