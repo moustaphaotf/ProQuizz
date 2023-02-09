@@ -1,0 +1,46 @@
+.animated-text {
+  text-transform: uppercase;
+}
+
+.animated-text span {
+  opacity: 1;
+  transition: all .4s;
+  display: inline-block;
+}
+
+.animated-text span:not(.fade){
+  opacity: 0;
+  transform: translateY(50%) rotate(45deg);
+}
+
+.animated-text--typing span.fade + span:not(.fade){
+  transition: none;
+  background-color: white;
+  opacity: 1;
+  transform: none;
+  color: transparent;
+}
+
+.home .content{
+  display: flex;
+  justify-content: center;
+}
+
+
+.welcome-animation {
+  width: 90%;
+  background: rgba(255, 255, 255,0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255,0.18);
+  margin-top: 50px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  user-select: none;
+  color: rgb(126, 122, 122);
+}
+
+.welcome-animation h2, .welcome-animation h4 {
+  margin: 0 0 10px;
+}
