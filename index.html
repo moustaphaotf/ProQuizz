@@ -6,22 +6,49 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>PROQUIZZ</title>
-	<link rel="stylesheet" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" />
+  
+  <!-- While working locally -->
+	<!-- <link rel="stylesheet" href="js/jquerymobile/jquery.mobile-1.4.5.min.css" /> -->
+	<!-- <script src="js/jquery-1.11.3.min.js" defer></script> -->
+	<!-- <script src="js/jquerymobile/jquery.mobile-1.4.5.min.js" defer></script> -->
+  
+  <!-- While working online -->
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom stylesheets -->
   <link rel="stylesheet" href="css/index.css">
-	<script src="js/jquery-1.11.3.min.js" defer></script>
-	<script src="js/jquerymobile/jquery.mobile-1.4.5.min.js" defer></script>
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Custom script files -->
   <script src="js/data.js"></script>
+  <script src="js/functions.js"></script>
 	<script src="js/index.js" defer></script>
+  <script src="js/animate.js" defer></script>
 </head>
+<body>
   <div id="container">
     <div class="page home" id="home" data-role="page">
       <div class="header"  data-role="header" data-role="header"  data-role="header">
+        <a href="#user" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user ui-btn-icon-notext">user</a>
         <div class="appname"><h1><span>P</span>RO<span>Q</span>UIZZ</h1></div>
-        <div class="logo"></div>
       </div>
       <div class="content" data-role="content">
-        <h>ProQuizz</h4>
-        <p></p>
+        <div class="welcome-animation">
+          <h2 class="animated-text">Bienvenue</h2>
+          <h4 class="animated-text animated-text--typing" data-speed="100" data-delay="3000">Contrôlez</h4>
+          <h4 class="animated-text animated-text--typing" data-speed="100" data-delay="4000">Testez</h4>
+          <h4 class="animated-text animated-text--typing" data-speed="100" data-delay="5000">Améliorez</h4>
+          <h4 class="animated-text animated-text--typing" data-speed="100" data-delay="6000">vos connaissances en C++</h4>
+        </div>
+        <div class="score">
+          <div class="username">anonymous</div>
+          <div class="level">
+            <span class="success">100</span> / <span class="total">120</span> Questions
+          </div>
+          <div class="score-value">500 pts</div>
+        </div>
       </div>
       <div class="footer" data-role="">
         <div class="copyright"><small>ProQuizz &copy; 2023</small></div>
@@ -45,11 +72,11 @@
           <div>
             <span class="multiple-choix-label">Plusieurs choix sont possibles !</span>
             <div class="qcm multiple">
-                <div>int</div>
-                <div>float</div>
-                <div>left</div>
-                <div>double</div>
-                <div>Lorem, ipsum dolor.</div>
+                <div data-value="">int</div>
+                <div data-value="">float</div>
+                <div data-value="">left</div>
+                <div data-value="">double</div>
+                <div data-value="">Lorem, ipsum dolor.</div>
             </div>
           </div>
           <div class="unique-answer" >
@@ -86,7 +113,33 @@
         </div>
         <div class="description">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nam atque explicabo ipsa a veniam. Inventore neque quisquam natus at saepe architecto accusamus iure debitis, optio esse odio unde dolor.</p>
-        </div>        <a href="#room" class="ui-btn new-question" data-rel="back">Continuer</a>
-      </div>    </div>
+        </div>        
+        <a href="#room" class="ui-btn new-question" data-rel="back">Continuer</a>
+      </div>    
+    </div>
+    <div class="page user" id="user" data-role="page" data-rel="dialog" data-transition="pop">
+      <div class="header"  data-role="header">
+        <h1>UTILISATEUR</h1>
+      </div>
+      <div class="main" data-role="main">
+        <div class="user-info">
+          <div><a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user ui-btn-icon-notext">user</a>
+          </div>
+          <div><input style="padding-left:20px;"type="text"placeholder="Entrez votre pseudo... ">
+          </div>
+        </div>
+        <div class="actions">
+          <a class="ui-btn new-question ui-btn-inline validate" data-rel="back">Valider</a>
+          <a href="#home" class="ui-btn new-question ui-btn-inline" data-rel="back">Annuler</a>
+        </div>
+
+      </div>    
+    </div>
   </div>
+</div>
+<audio class="error" src="./assets/error1.mp3" hidden></audio>
+<audio class="error" src="./assets/error2.mp3" hidden></audio>
+<audio class="success" src="./assets/success1.mp3" hidden></audio>
+<audio class="success" src="./assets/success2.mp3" hidden></audio>
+</body>
 </html>

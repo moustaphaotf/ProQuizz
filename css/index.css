@@ -1,21 +1,33 @@
+@font-face {
+  font-family: Itim;
+  src: url(../assets/Itim-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lobster;
+  src: url(../assets/Lobster-Regular.ttf);
+}
+
 [data-role="page"] {
   height: calc(100vh - 125px);
+}
+
+*{
+  font-family: Itim;
 }
 
 .page {
   position: relative;
   background: linear-gradient(24deg,#1C92d2,#f2fcfe);
-
 }
-.validate , .new-question{
 
+.validate , .new-question{
   background: rgba(255,255,255, .1)!important;
   width:25%;
   margin: 45px auto;
   border-radius: 50px;
   border-top:  1px solid rgba(31, 38, 135, .37) !important;
   border-right:  1px solid rgba(31, 38, 135, .37) !important;
-
 }
 
 .footer {
@@ -24,16 +36,14 @@
   width: 100%;
   left: 0;
   text-align: center;
-  
 }
+
 .copyright{
   opacity:1;
   color: #ddd !important;
   font-size: 1rem;
   user-select: none;
 }
-
-
 
 .begin {
   position:absolute;
@@ -49,19 +59,39 @@
 }
 
 .header .appname h1{
-  font-size: 1.5em;
+  font-size: 1.2em;
   user-select: none;
   font-style:italic;
+  color: rgba(0, 0, 0, 0.708)
 }
 
 .header .appname h1 span {
-  color: blue;
-  font-size: 2em;
+  color: rgba(0, 0, 255, 0.408);
+  font-size: 1.6em;
 }
 
+.home .content {
+  flex-direction: column;
+}
+
+.home .content .score .username{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.home .content .score {
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top:20px;
+  align-self: flex-end;
+  margin-right: 20px;
+  background: rgba(255, 255, 255,0.10);
+  box-shadow: 0 2px 2px 0 rgba(11, 11, 17, 0.37);
+}
+
+
 /* MISE EN FORME DE LA ROOM */
-
-
 .question {
   background: rgba(255, 255, 255,0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -69,11 +99,10 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255,0.18);
   margin: 25px;
-  font-family: gabriola;
   font-weight: bold;
   font-size: 20px;
   padding: 5px;
-  user-select: none; 
+  user-select: none;
 }
 .answers .true-false{
   display: flex;
@@ -133,7 +162,6 @@
 }
 .ui-input-text {
   width: 80% !important;
-  font-family:Gabriola;
   border-radius: 20px;
   outline: none;
   border: none;
@@ -144,15 +172,14 @@
 }
 .answers .unique-answer input{
   width: 80% !important;
-  font-family:Gabriola;
   border-radius: 20px;
   outline: none;
   border: none;
   padding: 9px;
-  font-size: 25px ;
+  font-size: 16px ;
   font-weight: bold;
   color:  black;
-
+  font-family: Itim;
 }
 .answers .unique-answer{
   display: flex;
@@ -165,4 +192,28 @@
   margin-left: 30px;
   margin-right: 30px;
 
+}
+
+/* Mis en forme de la page utilisateur */
+.user-info input{
+  display: inline-block; 
+  font-family: Itim;
+  font-size: 15px;
+}
+.user-info>*{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+.user-info{
+  border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  margin-top: 25px;
+  align-items: center;
+}
+
+ .user .actions{
+  display: flex;
+  justify-content: space-around;
 }
