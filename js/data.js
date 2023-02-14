@@ -29,7 +29,14 @@ let dataQuestions = [
     question : "La programmation est difficile ?",
     type: 'true-false',
     answer: true,
-    description: "La programmation est difficile car elle dépend de nombreux facteurs tels que les connaissances en mathématiques et en logique et la capacité à raisonner de manière analytique.",
+    description: "La programmation peut sembler difficile pour les débutants, mais avec la pratique, elle peut devenir une compétence très précieuse et amusante. La clé pour réussir est la persévérance et la détermination à comprendre les concepts fondamentaux.",
+    alreadyAsked: false,
+  },
+  {
+    question : "La programmation est difficile ?",
+    type: 'true-false',
+    answer: false,
+    description: "La programmation peut sembler difficile pour les débutants, mais avec la pratique, elle peut devenir une compétence très précieuse et amusante. La clé pour réussir est la persévérance et la détermination à comprendre les concepts fondamentaux.",
     alreadyAsked: false,
   },
   {
@@ -99,7 +106,7 @@ let dataQuestions = [
       "Haut niveau, niveau intermediaire et bas niveau"
     ],
     answer:0,
-    description: "Les expressions haut niveau et bas niveau sont relatif ça depend des langages que l'on compare.",
+    description: "Les expressions haut niveau et bas niveau sont relatives. Cela depend des langages que l'on compare.",
     alreadyAsked: false,
   },
   {type: "unique-answer",
@@ -125,7 +132,7 @@ let dataQuestions = [
   {type: "qcm multiple",
       question: "Le C++ est un langage :",
       propositions : [
-        "Procedurale",
+        "Procédural",
         "Orienté objet",
         "Multiparadigme"
       ],
@@ -312,14 +319,14 @@ let dataQuestions = [
     alreadyAsked: false
   },
   {type: "qcm",
-    question: "Quelle valeur contient une une variable entière à sa déclaration si cete dernière n'est pas initialisée ?",
+    question: "Quelle valeur contient une variable entière à sa déclaration si cette dernière n'est pas initialisée ?",
     propositions: [
       "0", 
       "Aucun des deux",
       "Une valeur inconnue",
     ], 
     answer: 2,
-    description: "Lorsqu'une variable n'est initialisée lors de sa création, elle contient une valeur arbitraire laissée par le dernier programme qui est passé par là !",
+    description: "Lorsqu'une variable n'est pas initialisée lors de sa création, elle contient une valeur arbitraire laissée par le dernier programme qui est passé par là !",
     alreadyAsked: false
   },
   {type: 'true-false',
@@ -331,10 +338,10 @@ let dataQuestions = [
   {type: "qcm multiple",
     question: "Choisissez la(les) bonne(s) syntaxe(s) de déclaration d’une référence (NB : la variable à référencer est de type type1",
     propositions: [
-      "type1 &amp;nom (variableAReferencer)",
-      "type2 &amp;nom (variableAReferencer)",
+      "type1 &amp;nom (variable)",
+      "type2 &amp;nom (variable)",
       "type2 &amp;nom",
-      "type1&amp; nom (variableAReferencer)",
+      "type1&amp; nom (variable)",
       "type1&amp; nom",
     ], 
     answers: [0, 3],
@@ -422,7 +429,7 @@ let dataQuestions = [
       "La variable à tester est réelle",
       "L'on ne teste que l'égalité"
     ], 
-    answer: 2,
+    answer: 1,
     description: "La structure conditionnelle switch est utilisée lorsque nous pouvons à l'avance prédire les valeurs que peuvent prendre notre variable. Donc, on ne teste que l'égalité avec elle.",
     alreadyAsked: false
   },
@@ -468,7 +475,7 @@ let dataQuestions = [
       "Arguments"
     ], 
     answer: 0,
-    description: "",
+    description: "On passe bien des <i>paramètres</i> à une fonction mais la fonction travaille avec des <i>arguments</i>!!!",
     alreadyAsked: false
   },
   {type: "qcm",
@@ -478,7 +485,7 @@ let dataQuestions = [
       "Arguments"
     ],
     answer: 1,
-    description: "",
+    description: "On passe bien des <i>paramètres</i> à une fonction mais la fonction(ou la procédure) travaille avec des <i>arguments</i>!!!",
     alreadyAsked: false
   },
   {
@@ -486,7 +493,7 @@ let dataQuestions = [
     question : " Soit nombre1 (valant 5) et nombre2 (valant 2) deux variables entières,(double)nombre1 / nombre2 est égal à : ",
     propositions:["2.5","2","2,5"],
     answer : 0,
-    description : " L'operation éffectuée dans ce bout de code est appelé Transtypage , elle permet de forcer le resultat d'une operation ",
+    description : " L'opération effectuée dans ce bout de code est appelée Transtypage , elle permet de forcer le résultat d'une opération.",
     alreadyAsked : false,
   },
   {
@@ -510,14 +517,14 @@ let dataQuestions = [
     question : "Quelles sont les quatres façon d'écrire la décrémentation d'une variable nombre ?",
     propositions : [ "nombre ++ ", "nombre --","--nombre"," nombre += 1","nombre -= 1","nombre = nombre - 1"],
     answers : [1,2,4,5],
-    description : " Décrémenter une variable revient à lui soustraire un et cela se fait de plusieurs maniéres ",
+    description : " Décrémenter une variable revient à lui soustraire un et cela se fait de plusieurs manières ",
     alreadyAsked : false,
   },
   {
     type :"qcm multiple",
     question : "Quelles sont les quatres façon d'écrire  l'incrémentation d'une variable nombre ?",
     propositions : [ "nombre ++ ", "nombre --","--nombre"," nombre += 1","nombre -= 1","nombre = nombre + 1", "++ nombre"],
-    description : " Incrémenter une variable revient à lui ajouter plus un et cela se fait de plusieurs maniéres ",
+    description : " Incrémenter une variable revient à lui ajouter plus un et cela se fait de plusieurs manières!",
     answers : [0,3,5,6],
     alreadyAsked : false,
   },
@@ -526,14 +533,14 @@ let dataQuestions = [
     question : "Retrancher un à une variable, c’est un(e): ",
     propositions : ["Affectation","Décrémentation","Incrémentation","Initialisation "],
     answer : 1,
-    description : "La décrémentation est une operation tellement courante en programmation au point qu'elle a diverses maniéres d'être representé en tout quatre  ",
+    description : "La décrémentation est une opération tellement courante en programmation au point qu'elle a diverses manières d'être représentée. En tout quatre!",
     alreadyAsked : false,
   },
   {
     type : "qcm",
     question : "Augmenter un à une variable, c’est un(e): ",
     propositions : ["Affectation","Décrémentation","Incrémentation","Initialisation "],
-    description : "L'incrémentation  est une operation tellement courante en programmation au point qu'elle a diverses maniéres d'être representé en tout quatre.",
+    description : "L'incrémentation  est une opération tellement courante en programmation au point qu'elle a diverses manières d'être représentée. En tout quatre!",
     answer : 2,
     alreadyAsked : false,
   },
@@ -564,14 +571,181 @@ let dataQuestions = [
   {
     type :"qcm multiple",
     question : "Choisissez la (les) bonnes syntaxes(s) :",
-    propositions : ["cin &gt;&gt; variable","cout &gt;&gt; variable","cout &lt;&lt; 'variable'","cin  &lt;&lt; 'variable'","cin  &lt;&lt; variable"],
+    propositions : ["cin &gt;&gt; variable","cout &gt;&gt; variable",'cout &lt;&lt; "variable"','cin  &lt;&lt; "variable"',"cin  &lt;&lt; variable"],
     answers : [0,2],
     description : "En matière de syntaxe il est important de connaître le sens des chevrons ,ce premier signifie '<<' : que les données sont à afficher et '>>' signifie que les données doivent provenir du clavier donc à saisir.",
     alreadyAsked : false,
-  }
+  },
+  {
+    type: "qcm multiple",
+    question: "Quels sont les éléments de base de la programmation orientée objet en C++ ?",
+    propositions: [ 'Héritage', 'Encapsulation', 'Polymorphisme', 'Abstraction' ],
+    answers: [0,1,2],
+    description: "L'héritage, l'encapsulation et le polymorphisme sont les éléments fondamentaux de la programmation orientée objet en C++, tandis que l'abstraction est souvent considérée comme un concept plus avancé.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm",
+    question: "Quel est le nom de la boucle utilisée pour répéter une séquence de code un nombre déterminé de fois ?",
+    propositions: [ 'for', 'while', 'do-while', 'repeat' ],
+    answer: 0,
+    description: "La boucle 'for' est utilisée pour répéter une séquence de code un nombre déterminé de fois.",
+    alreadyAsked: false
+  },
+  {
+    type: "true-false",
+    question: "Les pointeurs sont obligatoires pour la programmation en C++ ?",
+    answer: false,
+    description: "Les pointeurs sont un concept avancé en programmation en C++ et il n'est pas nécessaire de les utiliser dans tous les programmes.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm multiple",
+    question: "Quelles sont les différences entre les structures et les classes en C++ ?",
+    propositions: [
+      "Les structures n'ont pas de méthodes et les classes en ont",
+      "Les structures n'ont pas de constructeurs et les classes en ont",
+      "Les structures sont publiques par défaut et les classes sont privées par défaut",
+      "Les structures ne peuvent pas hériter et les classes peuvent"
+    ],
+    answers: [2,3],
+    description: "Les structures en C++ sont publiques par défaut et ne peuvent pas hériter, tandis que les classes sont privées par défaut et peuvent hériter.",
+    alreadyAsked: false
+  },
+  {
+    type: "unique-answer",
+    question: "Quel est le nom de la fonction utilisée pour accepter une entrée de l'utilisateur en C++ ?",
+    answer: "cin",
+    description: "La fonction 'cin' (acronyme de console input) est utilisée pour accepter une entrée de l'utilisateur en C++.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm",
+    question: "Dans une condition en C++, le symbole pour représenter 'ET' logique est :",
+    propositions: [ '&amp;&amp;', '||', '!', '^' ],
+    answer: 0,
+    description: "Le symbole '&&' représente l'opération 'ET' logique en C++.",
+    alreadyAsked : false
+  },
+  {
+    type: "unique-answer",
+    question: "Quel est le résultat de l'expression suivante en C++ : (1 + 2) * (4 - 2) / 2",
+    answer: "3",
+    description: "Le résultat de l'expression est 5, car (1 + 2) = 3, (4 - 2) = 2, et (3 * 2) / 2 = 3.<br />Vous devez très souvant faire attention à l'ordre des opérateurs en performant des calculs mathématiques !",
+    alreadyAsked: false,
+  },
+  {
+    type: "qcm",
+    question: "Quel est le résultat de l'expression logique suivante en C++ : !(true && false) || (true || false) ?",
+    propositions: ['Vrai', 'Faux',],
+    answer: 0,
+    description: "Le résultat de l'expression logique est Vrai, car !(true && false) = Vrai et (true || false) = Vrai, donc (Vrai || Vrai) = Vrai.<br />Quand il s'agit des opérateurs logiques, vous devez garder en mémoire la table de vérité de chaque opérateur (ET, OU, NON) !",
+    alreadyAsked: false,
+  },
+  {
+    type: "qcm",
+    question: "Qu'est-ce qu'une variable en C++ ?",
+    propositions: [
+      "Une constante",
+      "Une littérale",
+      "Un espace mémoire dans lequel on peut stocker une valeur",
+      "Un type de données"
+    ],
+    answer: 2,
+    description: "Une variable en C++ est un espace mémoire dans lequel on peut stocker une valeur d'un certain type.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm",
+    question: "Quel est le résultat de l'expression suivante en C++ : 5 % 2 * 3",
+    propositions: ['0', '1', '3', '5',],
+    answer: 2,
+    description: "L'expression est évaluée de gauche à droite selon les règles de priorité des opérateurs, donc 5 % 2 équivaut à 1, puis 1 * 3 équivaut à 3.",
+    alreadyAsked: false,
+  },
+  {
+    type: "qcm",
+    question: "Quel est le but principal d'une boucle 'for' en C++ ?",
+    propositions: [
+      "Répéter un nombre précis d'itérations",
+      "Répéter une action jusqu'à ce qu'une condition ne soit plus vraie",
+      "Effectuer une action une seule fois",
+      "Effectuer une action un nombre aléatoire d'itérations",
+    ],
+    answer: 0,
+    description: "Le but principal d'une boucle 'for' en C++ est de répéter un nombre précis d'itérations en incrémentant ou décrémentant un compteur à chaque tour de boucle.",
+    alreadyAsked: false
+  },
+  {
+    type: "unique-answer",
+    question: "Quel est l'opérateur de décalage de bits gauche en C++ ?",
+    answer: "<<",
+    description: "L'opérateur de décalage de bits gauche en C++ permet de décaler les bits d'un nombre entier vers la gauche.",
+    alreadyAsked: false
+  },
+  {
+    type: "unique-answer",
+    question: "Quel est l'opérateur d'addition en C++ ?",
+    answer: "+",
+    description: "L'opérateur d'addition en C++ permet d'additionner deux nombres entiers ou flottants.",
+    alreadyAsked: false
+    },
+  {
+    type: "unique-answer",
+    question: "Quel est l'opérateur de comparaison égal en C++ ?",
+    answer: "==",
+    description: "L'opérateur de comparaison égal en C++ permet de vérifier l'égalité entre deux valeurs.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm",
+    question: "Quel est le résultat de l'expression suivante en C++ : <code style='font-weight:normal'><br>int x = 10; <br>int *ptr = &x; <br>cout &lt;&lt; *ptr;</code>",
+    propositions: [
+      "10",
+      "L'expression ne compile pas",
+      "La valeur de x",
+      "L'adresse de x"
+    ],
+    answer: 0,
+    description: "L'expression affiche la valeur de x, qui est 10. L'opérateur * est l'opérateur de déréférencement. On l'utilise pour accéder indirectement au contenue d'une variable à travers son pointeur.",
+    alreadyAsked: false
+  },
+  {
+    type: "qcm",
+    question: "Quelle est la différence entre un pointeur et une référence en C++ ?",
+    propositions: [
+      "Les pointeurs peuvent être NULL, les références ne peuvent pas",
+      "Les références ne peuvent être modifiées, les pointeurs oui",
+      "Les références doivent être initialisées lors de leur déclaration, les pointeurs peuvent ne pas",
+      "Il n'y a pas de différence"
+    ],
+    answer: 2,
+    description: "Les références doivent être initialisées lors de leur déclaration, alors que les pointeurs peuvent ne pas être initialisées.",
+    alreadyAsked: false
+    },
+    {
+    type: "qcm",
+    question: "Quel est le résultat de l'expression suivante en C++ : int x = 10; int *ptr = &x; *ptr = 20; cout << x;",
+    propositions: [
+    "20",
+    "10",
+    "L'expression ne compile pas",
+    "La valeur de x"
+    ],
+    answer: 0,
+    description: "L'expression affiche la valeur 20, qui est la valeur modifiée par le pointeur ptr.",
+    alreadyAsked: false
+    }
 ];
 
-var q = [,
+var q = [
+  {type: "qcm",
+    question: "",
+    propositions : [],
+    answer: 0,
+    description: "",
+    alreadyAsked: false,
+  },
   {type: "qcm multiple",
     question: "",
     propositions : [],
