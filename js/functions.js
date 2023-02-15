@@ -33,7 +33,7 @@ function getUserAnswer() {
 function validate(userAnswer) {
   let success = true;
   console.log({
-    "Réponse correcte" : currentQuestion.answer, 
+    "Réponse correcte" : currentQuestion.answer || currentQuestion.answers, 
     "Réponse utilisateur" : userAnswer
   });
   switch(currentQuestion.type) {
